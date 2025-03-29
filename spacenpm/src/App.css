@@ -1,0 +1,196 @@
+/* General body setup */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: url('C:/Users/MOHAMAD/Desktop/api/space.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  height: 100vh;
+  color: white;
+  overflow: hidden; /* Prevent body scroll */
+  position: relative; /* Ensure the body itself is positioned for centering */
+}
+
+/* Main app container setup */
+.App {
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+  border-radius: 10px;
+  width: 80%;  /* The width of the box */
+  max-width: 1200px;
+  min-height: 80vh; /* Ensure the container takes up most of the viewport */
+  padding: 30px;
+  text-align: center;
+  box-sizing: border-box;
+  overflow-y: auto; /* Allow vertical scrolling for content */
+  backdrop-filter: blur(10px); /* Soft blur effect */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ensures the content inside the container is centered */
+  margin: 0 auto; /* Centers the container */
+}
+
+/* Title styling */
+h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Space debris list container */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 400px; /* Limiting the height of the list */
+  overflow-y: auto; /* Enable scrolling for list */
+  overflow-x: hidden; /* Remove horizontal scroll */
+}
+
+/* Styling for each debris item */
+li {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  margin: 15px 0;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+li:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Space debris title (name) */
+h3 {
+  font-size: 1.6rem;
+  color: #00ffcc; /* Space-like cyan */
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* Paragraph for the details */
+p {
+  font-size: 1.1rem;
+  color: #d1d1d1;
+  margin: 5px 0;
+}
+
+/* Add bold text for certain details like mass and mission */
+p span {
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Smooth scrolling for the list */
+ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+ul::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive design for different screen sizes */
+@media (max-width: 1280px) {
+  .App {
+    width: 85%;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .App {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* For tablet and smaller screens */
+  .App {
+    width: 95%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  li {
+    padding: 15px;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For very small screens (phones in portrait mode) */
+  .App {
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  li {
+    padding: 12px;
+    margin: 8px 0;
+  }
+}
